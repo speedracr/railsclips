@@ -1,0 +1,9 @@
+[
+  <% @projects.each do |project| %>
+    {
+      created_at: "<%= project.created_at.strftime("%b %d, %Y") %>",
+      title: " <%= project.title %> "
+    }
+    <%= "," unless project == Project.last %>
+  <% end %>
+]
